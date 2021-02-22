@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 
-public class CrearCategoriaTest {
+public class ConsultarCategoriaTest {
 
     WebDriver driver;
 
@@ -31,17 +31,16 @@ public class CrearCategoriaTest {
     }
 
     @Test
-    public void CreatCategoria() throws Exception {
-        System.out.println("Crear categoria test N° 5");
+    public void ConsultarCategoria() throws Exception {
+
+        System.out.println("Consultar categoria test N° 4");
         login = new LoginPage(driver);
         menu = new MenuPage(driver);
         cat = new BlogCategoriesPage(driver);
         login.Login(data.strCorreo, data.strPass);
         menu.clickMenuBlog();
         menu.clickMenuBlogCategories();
-        menu.clickBtnAdd();
-        cat.CrearCategoriaNueva(data.strNombreCategoria, data.strStatusEnable, data.strVietnamese, data.strRussian, data.strArabic, data.strFarsi, data.strTurkish, data.strFrench, data.strSpanish, data.strGerman);
-
+        cat.ConsultarCategotiaCreada(data.strNombreCategoria);
     }
 
     @After
