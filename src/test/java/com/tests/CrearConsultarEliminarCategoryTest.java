@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 
-public class CategoriaTest extends ClaseData {
+public class CrearConsultarEliminarCategoryTest extends ClaseData {
 
     WebDriver driver;
 
@@ -31,14 +31,13 @@ public class CategoriaTest extends ClaseData {
     }
 
     @Test
-    public void CreatCategoria() throws Exception {
-        System.out.println("Crear categoria test N° 1");
+    public void CrearCategoria() throws Exception {
+        System.out.println("Crear categoria test N° 3");
         login = new LoginPage(driver);
         menu = new MenuPage(driver);
         cat = new BlogCategoriesPage(driver);
 
         login.Login(data.strCorreo, data.strPass);
-
         menu.clickMenuBlog();
         login.getScreen("Screen clickMenuBlog");
         menu.clickMenuBlogCategories();
@@ -46,16 +45,14 @@ public class CategoriaTest extends ClaseData {
         menu.clickBtnAdd();
         cat.CrearCategoriaNueva(data.strNombreCategoria, data.strStatusEnable, data.strVietnamese, data.strRussian, data.strArabic, data.strFarsi, data.strTurkish, data.strFrench, data.strSpanish, data.strGerman);
         login.getScreen("Screen CrearCategoriaNueva");
-
         menu.clickMenuBlog();
         menu.clickMenuBlogCategories();
         cat.ConsultarCategotiaCreada(data.strNombreCategoria);
-        login.getScreen("Categoria creada: " +data.strNombreCategoria);
-
+        login.getScreen("Categoria creada " + data.strNombreCategoria);
         menu.clickMenuBlog();
         menu.clickMenuBlogCategories();
         cat.EliminarCategoria(data.strNombreCategoria);
-        login.getScreen("Categoria Eliminada: " +data.strNombreCategoria);
+        login.getScreen("Categoria Eliminada " + data.strNombreCategoria);
     }
 
     @After

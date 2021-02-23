@@ -32,7 +32,7 @@ public class CrearCategoriaTest {
 
     @Test
     public void CreatCategoria() throws Exception {
-        System.out.println("Crear categoria test N° 5");
+        System.out.println("Crear categoria test N° 1");
         login = new LoginPage(driver);
         menu = new MenuPage(driver);
         cat = new BlogCategoriesPage(driver);

@@ -1,19 +1,18 @@
-import com.tests.*;
+package com.tests;
+
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
-
 @Suite.SuiteClasses({
-        BlogPostTest.class,
-        CategoriaTest.class,
-        LoginTest.class,
+        CrearConsultarEliminarCategoryTest.class,
         CrearCategoriaTest.class,
+        BlogPostTest.class,
+        LoginTest.class,
         ConsultarCategoriaTest.class,
         EliminarCategoriaTest.class
-
 })
-public class JunitTestSuite {
+public class TestSuite {
 
 
 }

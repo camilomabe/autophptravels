@@ -1,5 +1,7 @@
 package com.pages;
 
+
+
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -132,13 +134,15 @@ public class BlogCategoriesPage {
             String cate = driver.findElement(lblNombreCategoria).getText();
             if (cate.contains(strNombreCategoria)) {
                 driver.findElement(lblNombreCategoria).click();
-                Thread.sleep(2000);
+
                 System.out.println("Categotia encontrada: " + strNombreCategoria);
+                Assert.assertEquals(strNombreCategoria, driver.findElement(lblNombreCategoria).getText());
                 break;
             } else {
                 System.out.println("Categotia no encontrada: " + strNombreCategoria);
-                Assert.fail();
+
             }
         }
+        Thread.sleep(4000);
     }
 }

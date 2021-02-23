@@ -29,21 +29,21 @@ public class LoginTest {
 
     @Test
     public void Login() throws Exception {
-        System.out.println("Login test N° 8");
+        System.out.println("Login test N° 4");
         categoria = new LoginPage(driver);
         categoria.Login(data.strCorreo, data.strPass);
-        driver.quit();
+
     }
 
     @Test
     public void LoginPhptravels() throws IOException, InterruptedException {
-        System.out.println("Login test N° 7");
+        System.out.println("Login test N° 5");
         categoria = new LoginPage(driver);
         categoria.setCorreo(data.strCorreo);
         categoria.setPassword(data.strPass);
         categoria.setCheckRemember();
         categoria.setLogin();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         categoria.getScreen("Screen Login");
     }
 

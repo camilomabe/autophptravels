@@ -1,4 +1,6 @@
 .idea/
 Choucair.iml
 target/
-screen/
+out/
+META-INF/
+target/

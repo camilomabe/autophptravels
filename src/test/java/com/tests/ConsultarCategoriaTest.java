@@ -33,7 +33,7 @@ public class ConsultarCategoriaTest {
     @Test
     public void ConsultarCategoria() throws Exception {
 
-        System.out.println("Consultar categoria test N° 4");
+        System.out.println("Consultar categoria test N° 6");
         login = new LoginPage(driver);
         menu = new MenuPage(driver);
         cat = new BlogCategoriesPage(driver);
@@ -41,6 +41,7 @@ public class ConsultarCategoriaTest {
         menu.clickMenuBlog();
         menu.clickMenuBlogCategories();
         cat.ConsultarCategotiaCreada(data.strNombreCategoria);
+        login.getScreen("Categoria consultada " + data.strNombreCategoria);
     }
 
     @After

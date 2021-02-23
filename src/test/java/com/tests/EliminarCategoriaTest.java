@@ -32,14 +32,21 @@ public class EliminarCategoriaTest {
 
     @Test
     public void EliminatedCategories() throws Exception {
-        System.out.println("Eliminar categoria test N° 6");
+        System.out.println("Eliminar categoria test N° 7");
         login = new LoginPage(driver);
         menu = new MenuPage(driver);
         cat = new BlogCategoriesPage(driver);
         login.Login(data.strCorreo, data.strPass);
+
+        menu.clickMenuBlog();
+        menu.clickMenuBlogCategories();
+        menu.clickBtnAdd();
+        cat.CrearCategoriaNueva(data.strNombreCategoria, data.strStatusEnable, data.strVietnamese, data.strRussian, data.strArabic, data.strFarsi, data.strTurkish, data.strFrench, data.strSpanish, data.strGerman);
+
         menu.clickMenuBlog();
         menu.clickMenuBlogCategories();
         cat.EliminarCategoria(data.strNombreCategoria);
+        login.getScreen("Categoria eliminada " + data.strNombreCategoria);
     }
 
     @After

@@ -34,7 +34,7 @@ public class BlogPostTest {
     @Test
     public void CreatPostCrearCategoriaParacrearPost() {
         try {
-            System.out.println("Crear una categoria y luego crear un post con la categoria Test N° 1");
+            System.out.println("Crear una categoria y luego crear un post con la categoria Test N° 2");
             login = new LoginPage(driver);
             menu = new MenuPage(driver);
             cat = new BlogCategoriesPage(driver);
@@ -48,6 +48,7 @@ public class BlogPostTest {
             login.getScreen("Screen clickBtnAdd Categoria");
             menu.clickBtnAdd();
             cat.CrearCategoriaNueva(data.strNombreCategoria, data.strStatusEnable, data.strVietnamese, data.strRussian, data.strArabic, data.strFarsi, data.strTurkish, data.strFrench, data.strSpanish, data.strGerman);
+
             login.getScreen("Screen CrearCategoriaNueva");
             menu.clickMenuBlog();
             menu.clickMenuBlogPost();
@@ -65,6 +66,7 @@ public class BlogPostTest {
             post.buscarClickBlog(data.strTitle);
             login.getScreen("Screen buscarClickBlog");
             post.clickPostWeb(data.strTitle);
+
         } catch (Exception ex) {
             System.out.println("Error en: " + ex.getMessage() + "\nTambien en: " + ex.getStackTrace());
         }

@@ -1,10 +1,12 @@
 package com.pages;
 
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.support.ui.Select;
 import org.w3c.dom.html.HTMLInputElement;
 
@@ -172,6 +174,7 @@ public class BlogPostPage {
         String nombreBlog = driver.findElement(getTextoBlog).getText();
         if (nombreBlog.contains(strTitle)) {
             System.out.println("Blog consultado exitosamente: " + strTitle);
+            Assert.assertEquals(strTitle, driver.findElement(getTextoBlog).getText());
             driver.findElement(getTextoBlog).click();
             Thread.sleep(4000);
         } else {
