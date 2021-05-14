@@ -5,4 +5,4 @@ Se debe cambiar el chromedriver.exe por la versión actual en la ruta =)> src/ma
 
 # Ejecutar suite de pruebas
 
-La clase RunnerTestSuite ejecuta todos los tests, se encuentra en la ruta =)> test/java/con/runner/RunnerTestSuite.java
+La clase RunnerTestSuite ejecuta todos los tests, se encuentra en la ruta =)> test/java/com/runner/RunnerTestSuite.java
